@@ -13,6 +13,9 @@
 		37B5F0C41CD999800033E35C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B5F0C21CD999800033E35C /* Main.storyboard */; };
 		37B5F0C61CD999810033E35C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B5F0C51CD999810033E35C /* Assets.xcassets */; };
 		37B5F0C91CD999810033E35C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B5F0C71CD999810033E35C /* LaunchScreen.storyboard */; };
+		37B5F0D21CD999D60033E35C /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B5F0D11CD999D60033E35C /* Spotify.framework */; };
+		37B5F0D41CD99DA90033E35C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B5F0D31CD99DA90033E35C /* AVFoundation.framework */; };
+		37B5F0D61CD99DB50033E35C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B5F0D51CD99DB50033E35C /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		37B5F0C51CD999810033E35C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B5F0C81CD999810033E35C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37B5F0CA1CD999810033E35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B5F0D11CD999D60033E35C /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
+		37B5F0D31CD99DA90033E35C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		37B5F0D51CD99DB50033E35C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B5F0D61CD99DB50033E35C /* SystemConfiguration.framework in Frameworks */,
+				37B5F0D41CD99DA90033E35C /* AVFoundation.framework in Frameworks */,
+				37B5F0D21CD999D60033E35C /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 		37B5F0AD1CD999800033E35C = {
 			isa = PBXGroup;
 			children = (
+				37B5F0D01CD999B40033E35C /* Frameworks */,
 				37B5F0B81CD999800033E35C /* thatTrack */,
 				37B5F0B71CD999800033E35C /* Products */,
 			);
@@ -77,6 +87,16 @@
 				37B5F0BA1CD999800033E35C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37B5F0D01CD999B40033E35C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37B5F0D51CD99DB50033E35C /* SystemConfiguration.framework */,
+				37B5F0D31CD99DA90033E35C /* AVFoundation.framework */,
+				37B5F0D11CD999D60033E35C /* Spotify.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = thatTrack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = DA.thatTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -277,8 +302,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = thatTrack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = DA.thatTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
