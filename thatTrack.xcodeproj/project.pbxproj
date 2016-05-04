@@ -16,6 +16,7 @@
 		37B5F0D21CD999D60033E35C /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B5F0D11CD999D60033E35C /* Spotify.framework */; };
 		37B5F0D41CD99DA90033E35C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B5F0D31CD99DA90033E35C /* AVFoundation.framework */; };
 		37B5F0D61CD99DB50033E35C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B5F0D51CD99DB50033E35C /* SystemConfiguration.framework */; };
+		37B5F0D91CD9B30F0033E35C /* Secrets.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B5F0D81CD9B30F0033E35C /* Secrets.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		37B5F0D11CD999D60033E35C /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
 		37B5F0D31CD99DA90033E35C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		37B5F0D51CD99DB50033E35C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37B5F0D71CD9B30F0033E35C /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
+		37B5F0D81CD9B30F0033E35C /* Secrets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Secrets.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				37B5F0C71CD999810033E35C /* LaunchScreen.storyboard */,
 				37B5F0CA1CD999810033E35C /* Info.plist */,
 				37B5F0B91CD999800033E35C /* Supporting Files */,
+				37B5F0D71CD9B30F0033E35C /* Secrets.h */,
+				37B5F0D81CD9B30F0033E35C /* Secrets.m */,
 			);
 			path = thatTrack;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B5F0C11CD999800033E35C /* ViewController.m in Sources */,
+				37B5F0D91CD9B30F0033E35C /* Secrets.m in Sources */,
 				37B5F0BE1CD999800033E35C /* AppDelegate.m in Sources */,
 				37B5F0BB1CD999800033E35C /* main.m in Sources */,
 			);
